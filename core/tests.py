@@ -20,6 +20,6 @@ class ItemAPITests(APITestCase):
 
         response = self.client.get("/api/items/")
 
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.json()), 1)
         self.assertEqual(response.json()[0]["name"], "Book")
